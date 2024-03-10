@@ -1,0 +1,95 @@
+.prefooter {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, #4c73d1);
+    overflow: hidden;
+    
+}
+
+.section1,
+.section2 {
+    padding: 20px;
+}
+
+.section1 {
+    width: 160%;
+    margin-left: -35%;
+    margin-top: -32%;
+    margin-bottom: -5%;
+}
+
+.section1 img {
+    border-radius: 50%;
+    /* Hace que la imagen sea circular */
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 80%);
+    /* Recorta las esquinas izquierdas */
+}
+
+
+
+
+
+/* Cuando la pantalla tenga un ancho mínimo de, por ejemplo, 768px (tamaño típico de una pantalla de PC) */
+@media (min-width: 768px) {
+    .prefooter {
+        flex-direction: row;
+        /* Cambia la disposición a horizontal */
+    }
+
+    .section1,
+    .section2 {
+        width: 50%;
+        /* Cada sección ocupa el 50% del espacio horizontal */
+    }
+    .section1 {
+        margin-left: -20%;
+        margin-top: -20%;
+        margin-bottom: -5%;
+    }
+
+    .section2 {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        display: flex;
+        margin-left: 10vh;
+        align-items: center;
+        /* Centra verticalmente */
+    }
+}
+
+
+.title {
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+
+
+}
+
+.subtitle {
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.description {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white
+
+}
