@@ -1,5 +1,7 @@
+<!-- header.component.html -->
+
 <div class="header-container">
-    <div class="section first-section">
+    <div class="section first-section" (click)="toggleMenu()">
         <i class="fas fa-bars"></i>
     </div>
     <div class="section second-section">
@@ -8,4 +10,26 @@
     <div class="section third-section">
         <i class="fas fa-globe"></i>
     </div>
+</div>
+
+<!-- Menú lateral -->
+<div class="sidebar" [ngClass]="{ 'open': isMenuOpen }">
+    <div class="close-icon" (click)="toggleMenu()">
+        <i class="fas fa-times"></i> <!-- Icono X para cerrar el menú -->
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Check in</a></li>
+            <li><a href="#">Manage my booking</a></li>
+            <li (click)="toggleSubMenu()">Information 
+                <ul class="submenu" *ngIf="isSubMenuOpen"> 
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Flight states</a></li>
+                    <li><a href="#">Airplanes</a></li>
+                    <li><a href="#">Routes</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </div>

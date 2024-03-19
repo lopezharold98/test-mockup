@@ -7,9 +7,9 @@ import { BodyModule } from './body/body.module'; // Asegúrate de tener la ruta 
   ],
   imports: [
     BrowserModule,
-    BodyModule // Importa el módulo que contiene BodyComponent
+    BodyModule
   ],
   providers: [],
-  bootstrap: [] // Elimina AppComponent del array bootstrap
+  bootstrap: [] 
 })
 export class AppModule { }

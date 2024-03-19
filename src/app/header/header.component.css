@@ -1,24 +1,73 @@
+/* header.component.css */
+
 .header-container {
-    display: flex;
-    width: 100%;
-  }
-  
-  .section {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    
-  }
-  
-  .first-section {
-    flex: 15%;
-  }
-  
-  .second-section {
-    flex: 70%;
-  }
-  
-  .third-section {
-    flex: 15%;
-  }
-  
+  display: flex;
+  width: 100%;
+}
+
+.section {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.first-section {
+  flex: 15%;
+}
+
+.second-section {
+  flex: 70%;
+}
+
+.third-section {
+  flex: 15%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav {
+  margin-top: 50px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar nav ul li {
+  text-align: center; /* Centra el texto dentro de cada opción del menú */
+  border-bottom: 1px solid #ccc; /* Agrega una línea gris debajo de cada opción del menú */
+  padding: 10px 0; /* Ajusta el relleno para separar el texto de la línea */
+}
+
+.close-icon {
+  text-align: center; 
+  padding: 10px 0; 
+}
+
+.close-icon i {
+  font-size: 24px; 
+  cursor: pointer;
+}
+
+
